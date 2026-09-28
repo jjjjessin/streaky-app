@@ -3,58 +3,196 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Streaky — Getting stuff done!</title>
-<meta name="description" content="Streaky is a cheerful habit tracker. Keep a flame alive for every habit, celebrate milestones, and pause without losing your streak." />
+<title>Streaky — Keep every flame alive</title>
+<meta name="description" content="Streaky is a cheerful habit tracker. Give every habit a little flame, check in once a day, and watch your streak grow into a quest." />
 <meta name="apple-itunes-app" content="app-id=6815227488" />
-<link rel="stylesheet" href="styles.css" />
+<meta property="og:title" content="Streaky — Keep every flame alive" />
+<meta property="og:description" content="Give every habit a little flame. One tap a day, and your streak becomes a quest." />
+<meta property="og:image" content="assets/shots/quest.jpg" />
+<link rel="icon" href="assets/streaky-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" />
+<link rel="stylesheet" href="landing.css" />
 </head>
 <body>
-<div class="wrap">
-  <header class="site">
-    <div class="brand"><img src="assets/streaky-icon.png" alt="Streaky" />Streaky</div>
-    <nav><a href="https://apps.apple.com/app/id6815227488">Download</a><a href="#support">Support</a><a href="privacy.html">Privacy</a></nav>
-  </header>
 
-  <section class="hero">
-    <img class="logo" src="assets/streaky-icon.png" alt="Streaky app icon" />
-    <h1>Keep every flame <span class="hero-accent">alive</span>.</h1>
-    <p class="sub">Streaky turns your habits into little flames. Check in once a day, watch your streaks grow, and get a party when you hit 7, 30 and 100 days.</p>
-    <div><a class="badge" href="https://apps.apple.com/app/id6815227488"><span class="apple"></span>Download on the App Store</a></div>
-    <p class="fine">Free · iPhone · iOS 18 or later</p>
-  </section>
-
-  <section class="features">
-    <div class="card"><div class="ic">🔥</div><h3>One tap a day</h3><p>Check in from the app or straight from the Home Screen widget. Missed yesterday? Log it the next morning.</p></div>
-    <div class="card"><div class="ic">🚫</div><h3>Build or break</h3><p>Track things you want to do, things you want to stop, and goals like "4 times a week".</p></div>
-    <div class="card"><div class="ic">🎉</div><h3>Celebrations</h3><p>Confetti for every check-in, a clean-sweep dance when everything is done, and fireworks at 100 days.</p></div>
-    <div class="card"><div class="ic">🧣</div><h3>Pause, don't lose it</h3><p>Vacation, sick day or just a break: pause your streaks and pick up where you left off.</p></div>
-  </section>
-
-  <div class="note">
-    <b>Your habits stay on your phone.</b> Streaky has no account, no ads and no tracking. Everything you enter is stored only on your device; the app only sends anonymous usage statistics, which you can switch off. Read more in the <a href="privacy.html">privacy policy</a>.
+<header class="nav">
+  <div class="wrap nav-row">
+    <a class="brand" href="#top"><img src="assets/streaky-icon.png" alt="" />Streaky</a>
+    <nav class="links">
+      <a href="#how">How it works</a>
+      <a href="#quest">Quest</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-small" href="https://apps.apple.com/app/id6815227488">Get the app</a>
   </div>
+</header>
 
-  <section class="doc" id="support">
-    <h1>Support</h1>
-    <p>Questions, bugs or ideas? Email <a href="mailto:hello@theproductpeople.se?subject=Streaky">hello@theproductpeople.se</a> and we'll get back to you.</p>
-    <h2>How do I check in from the Home Screen?</h2>
-    <p>Long-press your Home Screen, tap <b>Edit → Add Widget</b>, search for <b>Streaky</b> and add the small or medium widget. Tap a circle in the widget to check in.</p>
-    <h2>I forgot to check in yesterday.</h2>
-    <p>Open Streaky the next day and use the <b>Log yesterday?</b> card at the top, or open the habit and tap yesterday in its calendar.</p>
-    <h2>How do reminders work?</h2>
-    <p>Streaky sends one evening check-in that lists everything still open, with a <b>Mark all done</b> button right in the notification. Goals you only know the next day, like bedtime, get a morning check-in instead. Change the times, or turn on extra reminders for a single goal, in <b>Settings → Notifications</b>.</p>
-    <h2>How does pausing work?</h2>
-    <p>Long-press a habit on the Today screen, or open it and tap <b>Pause this goal</b>. Choose vacation, sick day or a break and how long it lasts; the pause ends by itself. Paused days never break a streak, and you can resume any time.</p>
-    <h2>Can I change a past day?</h2>
-    <p>Past days are locked so your streak stays honest. As you keep your streaks going you earn <b>edits</b>; open a habit, tap the day in its calendar and spend one edit to fix it.</p>
-    <h2>Will I lose my streaks if I delete the app?</h2>
-    <p>Yes. Your data lives only on your device, so deleting the app deletes your habits too.</p>
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <span class="pill">🔥 One tap a day</span>
+      <h1>Keep every habit <span class="accent">alive</span>, one flame at a time.</h1>
+      <p class="lead">Streaky gives every habit a little flame. Check in once a day, keep your streaks going, and watch your days turn into a journey along a river.</p>
+      <div class="cta-row">
+        <a class="store" href="https://apps.apple.com/app/id6815227488" aria-label="Download on the App Store">
+          <span class="apple" aria-hidden="true"></span>
+          <span><small>Download on the</small>App Store</span>
+        </a>
+        <a class="btn btn-ghost" href="#video">▶ Watch the video</a>
+      </div>
+      <ul class="facts">
+        <li>Free</li><li>No account</li><li>No ads</li><li>iPhone · iOS 18+</li>
+      </ul>
+    </div>
+    <div class="hero-art">
+      <div class="phone tilt-r"><img src="assets/shots/quest.jpg" alt="The Quest map: every day is a stepping stone on a river" /></div>
+      <div class="float f1"><span class="fl">🔥</span><b>24</b> day streak</div>
+      <div class="float f2"><span class="dot ok">✓</span>Walk 20 minutes</div>
+      <div class="float f3">🎁 Chest in 6 days</div>
+    </div>
   </section>
 
-  <footer class="site">
-    <div><a href="privacy.html">Privacy Policy</a> · <a href="mailto:hello@theproductpeople.se">Contact</a></div>
-    <p style="margin-top:10px;">© 2026 The Product People</p>
-  </footer>
-</div>
+  <!-- How it works -->
+  <section id="how" class="band">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>Pick a promise. Keep it. Watch it grow.</h2>
+      <div class="cards4">
+        <article class="scard c-orange">
+          <span class="tag">Step 1</span>
+          <h3>Pick a promise</h3>
+          <div class="phone sm"><img src="assets/shots/create.jpg" alt="Creating a goal from templates" loading="lazy" /></div>
+        </article>
+        <article class="scard c-green">
+          <span class="tag">Step 2</span>
+          <h3>One tap a day</h3>
+          <div class="phone sm"><img src="assets/shots/home.jpg" alt="My goals with Yes and No buttons" loading="lazy" /></div>
+        </article>
+        <article class="scard c-cream">
+          <span class="tag">Step 3</span>
+          <h3>Every check-in is a win</h3>
+          <div class="phone sm"><img src="assets/shots/nice.jpg" alt="A 24-day streak celebration" loading="lazy" /></div>
+        </article>
+        <article class="scard c-ink">
+          <span class="tag">Step 4</span>
+          <h3>Clean sweep!</h3>
+          <div class="phone sm"><img src="assets/shots/sweep.jpg" alt="Clean sweep celebration when every goal is done" loading="lazy" /></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quest -->
+  <section id="quest" class="wrap split">
+    <div class="split-copy">
+      <p class="eyebrow">Quest</p>
+      <h2>Your streak, as a journey.</h2>
+      <p>Every day is a stepping stone on a winding river, with a mark for each goal you completed. Your flame stands on today and jumps when you check in.</p>
+      <ul class="ticks">
+        <li>Open a chest at 7 days, collect trophies at 30, 50, 75 and 100</li>
+        <li>Earn edits to fix a past day, and freezes that save a missed one</li>
+        <li>See day and night, and zoom out to see how far you've come</li>
+      </ul>
+      <p class="muted">Prefer a simple list? Quest can be turned off in Settings.</p>
+    </div>
+    <div class="split-art duo">
+      <div class="phone tilt-l"><img src="assets/shots/night.jpg" alt="The Quest map at night with trophies on the horizon" loading="lazy" /></div>
+      <div class="phone tilt-r"><img src="assets/shots/rest.jpg" alt="Freeze, sick and pause days on the map" loading="lazy" /></div>
+    </div>
+  </section>
+
+  <!-- Why -->
+  <section class="band band-cream">
+    <div class="wrap">
+      <p class="eyebrow">Why it works</p>
+      <h2>Small promises, kept every day.</h2>
+      <div class="why">
+        <div class="wcard"><div class="ic">👆</div><h3>Tiny effort</h3><p>One tap in the app, the widget, or straight from the evening reminder. Mark everything done at once.</p></div>
+        <div class="wcard"><div class="ic">🚫</div><h3>Build or break</h3><p>Do-goals like reading, avoid-goals like no candy, and goals like "gym 3 times a week".</p></div>
+        <div class="wcard"><div class="ic">🌙</div><h3>Life happens</h3><p>Vacation, sick day or a break? Pause a goal and your streak waits for you.</p></div>
+        <div class="wcard"><div class="ic">📅</div><h3>The whole story</h3><p>Every goal has a calendar. Past days are locked, but edits you earn let you fix one.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="wrap center">
+    <p class="eyebrow">Goals for every part of life</p>
+    <h2>Start from a template, or write your own.</h2>
+    <div class="chips">
+      <span class="chip">🏃 Body</span><span class="chip">🏠 Home</span><span class="chip">🧘 Mind</span><span class="chip">💼 Career</span>
+    </div>
+    <p class="muted">Walk, read, drink water, bring a lunchbox, meditate, deep work, no alcohol, in bed by 11 … up to 9 goals at a time.</p>
+  </section>
+
+  <!-- Video -->
+  <section id="video" class="band band-orange">
+    <div class="wrap split">
+      <div class="split-copy light">
+        <p class="eyebrow">See it in action</p>
+        <h2>A minute with Streaky.</h2>
+        <p>From your first flame to a clean sweep, and your streak on the Quest map.</p>
+      </div>
+      <div class="video-wrap">
+        <video src="assets/streaky-promo.mp4" poster="assets/promo-poster.jpg" controls playsinline preload="none"></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detail -->
+  <section class="wrap split rev">
+    <div class="split-art">
+      <div class="phone tilt-l"><img src="assets/shots/detail.jpg" alt="A goal's calendar with done, frozen, sick and paused days" loading="lazy" /></div>
+    </div>
+    <div class="split-copy">
+      <p class="eyebrow">Private by design</p>
+      <h2>Your habits stay on your phone.</h2>
+      <p>No account, no ads, no tracking. Everything you enter is stored on your iPhone. Streaky only sends anonymous usage statistics, and you can switch them off in Settings.</p>
+      <a class="link" href="privacy.html">Read the privacy policy →</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="wrap narrow">
+    <p class="eyebrow">FAQ</p>
+    <h2>Good questions.</h2>
+    <details open><summary>Is Streaky free?</summary><p>Yes. Streaky is free to download and use, with no ads and no account.</p></details>
+    <details><summary>How do I check in from the Home Screen?</summary><p>Long-press your Home Screen, tap <b>Edit → Add Widget</b>, search for <b>Streaky</b> and add the small or medium widget. Tap a circle in the widget to check in.</p></details>
+    <details><summary>How do reminders work?</summary><p>Streaky sends one evening check-in that lists everything still open, with a <b>Mark all done</b> button in the notification. Goals you only know the next day, like bedtime, get a morning check-in instead. Change the times in <b>Settings → Notifications</b>.</p></details>
+    <details><summary>I forgot to check in yesterday.</summary><p>Open Streaky and use the <b>Log yesterday?</b> card at the top. For older days, open the goal, tap the day in its calendar and spend an edit.</p></details>
+    <details><summary>What is Quest?</summary><p>A second view that shows your streak as a path of days along a river. Milestones give you edits and streak freezes. You can turn it off in <b>Settings → Quest</b>.</p></details>
+    <details><summary>How does pausing work?</summary><p>Long-press a goal, or open it and tap <b>Pause this goal</b>. Choose vacation, sick or a break and how long it lasts; the pause ends by itself. Paused days never break a streak.</p></details>
+    <details><summary>Will I lose my streaks if I delete the app?</summary><p>Yes. Your data lives only on your device, so deleting the app deletes your habits too.</p></details>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="wrap">
+    <div class="final">
+      <img src="assets/streaky-icon.png" alt="" />
+      <h2>Light your first flame today.</h2>
+      <a class="store store-light" href="https://apps.apple.com/app/id6815227488" aria-label="Download on the App Store">
+        <span class="apple" aria-hidden="true"></span>
+        <span><small>Download on the</small>App Store</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Support -->
+  <section id="support" class="wrap narrow center">
+    <h2 class="h-small">Support</h2>
+    <p>Questions, bugs or ideas? Email <a class="link" href="mailto:hello@theproductpeople.se?subject=Streaky">hello@theproductpeople.se</a> and we'll get back to you.</p>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <a class="brand" href="#top"><img src="assets/streaky-icon.png" alt="" />Streaky</a>
+    <nav><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="privacy.html">Privacy</a><a href="#support">Support</a></nav>
+    <p>© 2026 The Product People</p>
+  </div>
+</footer>
 </body>
 </html>
