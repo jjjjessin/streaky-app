@@ -130,6 +130,12 @@ details p { padding: 0 22px 20px; color: var(--muted); font-weight: 700; }
 .foot nav { display: flex; gap: 22px; font-weight: 800; color: var(--muted); }
 .foot p { margin-left: auto; color: var(--muted); font-weight: 700; font-size: 14px; }
 
+@media (max-width: 1100px) {
+  .cards4.carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; margin-inline: -16px; padding: 4px 16px 10px;
+    scroll-padding-inline: 16px; scrollbar-width: none; }
+  .cards4.carousel::-webkit-scrollbar { display: none; }
+  .cards4.carousel > * { flex: 0 0 min(300px, 78%); scroll-snap-align: start; }
+}
 @media (max-width: 900px) {
   section { padding: 64px 0; }
   .hero, .split { grid-template-columns: 1fr; }
