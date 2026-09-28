@@ -21,11 +21,14 @@
     <a class="brand" href="#top"><img src="assets/streaky-icon.png" alt="" />Streaky</a>
     <nav class="links">
       <a href="#how">How it works</a>
-      <a href="#quest">Quest</a>
+      <a href="#features">Features</a>
       <a href="#faq">FAQ</a>
     </nav>
     <a class="btn btn-small" href="https://apps.apple.com/app/id6815227488">Get the app</a>
   </div>
+  <nav class="pills" aria-label="Sections">
+    <a href="#how">How it works</a><a href="#features">Features</a><a href="#video">Video</a><a href="#faq">FAQ</a>
+  </nav>
 </header>
 
 <main id="top">
@@ -60,7 +63,7 @@
     <div class="wrap">
       <p class="eyebrow">How it works</p>
       <h2>Pick a promise. Keep it. Watch it grow.</h2>
-      <div class="cards4">
+      <div class="cards4 carousel" data-dots="how-dots">
         <article class="scard c-orange">
           <span class="tag">Step 1</span>
           <h3>Pick a promise</h3>
@@ -82,25 +85,65 @@
           <div class="phone sm"><img src="assets/shots/sweep.jpg" alt="Clean sweep celebration when every goal is done" loading="lazy" /></div>
         </article>
       </div>
+      <div class="dots" id="how-dots" aria-hidden="true"></div>
     </div>
   </section>
 
-  <!-- Quest -->
-  <section id="quest" class="wrap split">
-    <div class="split-copy">
-      <p class="eyebrow">Quest</p>
-      <h2>Your streak, as a journey.</h2>
-      <p>Every day is a stepping stone on a winding river, with a mark for each goal you completed. Your flame stands on today and jumps when you check in.</p>
-      <ul class="ticks">
-        <li>Open a chest at 7 days, collect trophies at 30, 50, 75 and 100</li>
-        <li>Earn edits to fix a past day, and freezes that save a missed one</li>
-        <li>See day and night, and zoom out to see how far you've come</li>
-      </ul>
-      <p class="muted">Prefer a simple list? Quest can be turned off in Settings.</p>
+  <!-- Features (tabs) -->
+  <section id="features" class="wrap">
+    <p class="eyebrow">Features</p>
+    <h2>Your streak, as a journey.</h2>
+    <div class="tabs" role="tablist">
+      <button role="tab" aria-selected="true" data-tab="quest">🗺️ Quest</button>
+      <button role="tab" aria-selected="false" data-tab="rest">🌙 Rest days</button>
+      <button role="tab" aria-selected="false" data-tab="calendar">📅 Calendar</button>
+      <button role="tab" aria-selected="false" data-tab="private">🔒 Private</button>
     </div>
-    <div class="split-art duo">
-      <div class="phone tilt-l"><img src="assets/shots/night.jpg" alt="The Quest map at night with trophies on the horizon" loading="lazy" /></div>
-      <div class="phone tilt-r"><img src="assets/shots/rest.jpg" alt="Freeze, sick and pause days on the map" loading="lazy" /></div>
+    <div class="panels">
+      <div class="panel" data-panel="quest" role="tabpanel">
+        <div class="phone tilt-l"><img src="assets/shots/quest.jpg" alt="The Quest map" loading="lazy" /></div>
+        <div class="panel-copy">
+          <h3>Every day is a stepping stone</h3>
+          <p>A winding river with a mark for each goal you completed. Your flame stands on today and jumps when you check in.</p>
+          <ul class="ticks">
+            <li>Open a chest at 7 days</li>
+            <li>Trophies at 30, 50, 75 and 100</li>
+            <li>Zoom out to see how far you've come</li>
+          </ul>
+          <p class="muted">Prefer a simple list? Turn Quest off in Settings.</p>
+        </div>
+      </div>
+      <div class="panel" data-panel="rest" role="tabpanel" hidden>
+        <div class="phone tilt-r"><img src="assets/shots/rest.jpg" alt="Freeze, sick and pause days on the map" loading="lazy" /></div>
+        <div class="panel-copy">
+          <h3>Life happens. Streaks survive.</h3>
+          <p>Vacation, a sick day or just a break? Pause a goal and your streak waits for you.</p>
+          <ul class="ticks">
+            <li>Mark a sick day and rest up</li>
+            <li>Earn freezes that save a missed day</li>
+            <li>Pauses end by themselves</li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel" data-panel="calendar" role="tabpanel" hidden>
+        <div class="phone tilt-l"><img src="assets/shots/detail.jpg" alt="A goal's calendar" loading="lazy" /></div>
+        <div class="panel-copy">
+          <h3>Every day at a glance</h3>
+          <p>Each goal has a calendar with done, missed, frozen, sick and paused days, plus your current and best streak.</p>
+          <ul class="ticks">
+            <li>Past days are locked to keep it honest</li>
+            <li>Edits you earn let you fix one</li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel" data-panel="private" role="tabpanel" hidden>
+        <div class="phone tilt-r"><img src="assets/shots/night.jpg" alt="The Quest map at night" loading="lazy" /></div>
+        <div class="panel-copy">
+          <h3>Your habits stay on your phone</h3>
+          <p>No account, no ads, no tracking. Everything you enter is stored on your iPhone. Only anonymous usage statistics are sent, and you can switch them off.</p>
+          <a class="link" href="privacy.html">Read the privacy policy →</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -109,12 +152,13 @@
     <div class="wrap">
       <p class="eyebrow">Why it works</p>
       <h2>Small promises, kept every day.</h2>
-      <div class="why">
+      <div class="why carousel" data-dots="why-dots">
         <div class="wcard"><div class="ic">👆</div><h3>Tiny effort</h3><p>One tap in the app, the widget, or straight from the evening reminder. Mark everything done at once.</p></div>
         <div class="wcard"><div class="ic">🚫</div><h3>Build or break</h3><p>Do-goals like reading, avoid-goals like no candy, and goals like "gym 3 times a week".</p></div>
         <div class="wcard"><div class="ic">🌙</div><h3>Life happens</h3><p>Vacation, sick day or a break? Pause a goal and your streak waits for you.</p></div>
         <div class="wcard"><div class="ic">📅</div><h3>The whole story</h3><p>Every goal has a calendar. Past days are locked, but edits you earn let you fix one.</p></div>
       </div>
+      <div class="dots" id="why-dots" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -139,19 +183,6 @@
       <div class="video-wrap">
         <video src="assets/streaky-promo.mp4" poster="assets/promo-poster.jpg" controls playsinline preload="none"></video>
       </div>
-    </div>
-  </section>
-
-  <!-- Detail -->
-  <section class="wrap split rev">
-    <div class="split-art">
-      <div class="phone tilt-l"><img src="assets/shots/detail.jpg" alt="A goal's calendar with done, frozen, sick and paused days" loading="lazy" /></div>
-    </div>
-    <div class="split-copy">
-      <p class="eyebrow">Private by design</p>
-      <h2>Your habits stay on your phone.</h2>
-      <p>No account, no ads, no tracking. Everything you enter is stored on your iPhone. Streaky only sends anonymous usage statistics, and you can switch them off in Settings.</p>
-      <a class="link" href="privacy.html">Read the privacy policy →</a>
     </div>
   </section>
 
@@ -194,5 +225,44 @@
     <p>© 2026 The Product People</p>
   </div>
 </footer>
+
+<div class="dockbar" aria-hidden="true">
+  <img src="assets/streaky-icon.png" alt="" />
+  <div><b>Streaky</b><span>Free habit tracker</span></div>
+  <a class="btn btn-small" href="https://apps.apple.com/app/id6815227488" tabindex="-1">Get</a>
+</div>
+
+<script>
+// Tabs
+document.querySelectorAll('.tabs button').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.tabs button').forEach(x => x.setAttribute('aria-selected', x === b));
+  document.querySelectorAll('.panel').forEach(p => p.hidden = p.dataset.panel !== b.dataset.tab);
+  b.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+}));
+// Carousel dots (only when the row actually scrolls, i.e. on phones)
+document.querySelectorAll('.carousel').forEach(c => {
+  const dots = document.getElementById(c.dataset.dots);
+  const items = [...c.children];
+  items.forEach((it, i) => {
+    const d = document.createElement('button');
+    d.addEventListener('click', () => c.scrollTo({ left: it.offsetLeft - c.offsetLeft - 16, behavior: 'smooth' }));
+    dots.appendChild(d);
+  });
+  const update = () => {
+    const mid = c.scrollLeft + c.clientWidth / 2;
+    let best = 0, dist = 1e9;
+    items.forEach((it, i) => { const m = it.offsetLeft - c.offsetLeft + it.clientWidth / 2; if (Math.abs(m - mid) < dist) { dist = Math.abs(m - mid); best = i; } });
+    [...dots.children].forEach((d, i) => d.classList.toggle('on', i === best));
+    dots.hidden = c.scrollWidth <= c.clientWidth + 2;
+  };
+  c.addEventListener('scroll', update, { passive: true });
+  addEventListener('resize', update);
+  update();
+});
+// Sticky download bar once the hero's App Store button is out of view
+const heroCta = document.querySelector('.hero .store');
+const dock = document.querySelector('.dockbar');
+new IntersectionObserver(([e]) => dock.classList.toggle('show', !e.isIntersecting && e.boundingClientRect.top < 0)).observe(heroCta);
+</script>
 </body>
 </html>

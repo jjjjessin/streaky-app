@@ -135,12 +135,10 @@ details p { padding: 0 22px 20px; color: var(--muted); font-weight: 700; }
   .hero, .split { grid-template-columns: 1fr; }
   .hero { padding-top: 36px; gap: 20px; }
   .split.rev .split-art { order: 0; }
-  .cards4, .why { grid-template-columns: 1fr 1fr; }
   .links { display: none; }
   .nav-row .btn-small { margin-left: auto; }
 }
 @media (max-width: 520px) {
-  .cards4, .why { grid-template-columns: 1fr; }
   .phone { width: 250px; }
   .split-art.duo .phone { width: 190px; }
   .float { font-size: 13px; padding: 9px 12px; }
@@ -149,3 +147,67 @@ details p { padding: 0 22px 20px; color: var(--muted); font-weight: 700; }
   .foot p { margin-left: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .float { animation: none; } html { scroll-behavior: auto; } }
+
+/* ---------- section pills (phones) ---------- */
+.pills { display: none; gap: 8px; overflow-x: auto; padding: 0 16px 10px; scrollbar-width: none; }
+.pills::-webkit-scrollbar { display: none; }
+.pills a { flex: none; padding: 7px 14px; border-radius: 999px; background: #fff; border: 2px solid var(--line); font-weight: 800; font-size: 14px; }
+
+/* ---------- tabs ---------- */
+.tabs { display: flex; gap: 10px; margin: 26px 0 30px; overflow-x: auto; scrollbar-width: none; padding-bottom: 6px; }
+.tabs::-webkit-scrollbar { display: none; }
+.tabs button { flex: none; font: inherit; font-weight: 900; font-size: 16px; padding: 12px 18px; border-radius: 16px; cursor: pointer;
+  background: #fff; color: var(--ink); border: 2px solid var(--line); box-shadow: 0 4px 0 var(--line); }
+.tabs button[aria-selected="true"] { background: var(--deep); color: #fff; border-color: var(--deep); box-shadow: 0 4px 0 var(--edge); }
+.panel { display: grid; grid-template-columns: auto 1fr; gap: 56px; align-items: center; animation: fadein .35s ease; }
+.panel[hidden] { display: none; }
+.panel .phone { width: 280px; }
+.panel-copy h3 { font-size: 28px; line-height: 1.15; margin-bottom: 10px; }
+.panel-copy p { font-size: 18px; color: var(--muted); font-weight: 700; }
+@keyframes fadein { from { opacity: 0; transform: translateY(8px); } }
+
+/* ---------- carousels ---------- */
+.dots { display: flex; justify-content: center; gap: 8px; margin-top: 18px; }
+.dots[hidden] { display: none; }
+.dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 4px; background: #E3D2C0; cursor: pointer; transition: width .2s, background .2s; }
+.dots button.on { width: 24px; background: var(--deep); }
+
+/* ---------- sticky download bar (phones) ---------- */
+.dockbar { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 30; display: none; align-items: center; gap: 12px; padding: 10px 10px 10px 12px;
+  border-radius: 22px; background: rgba(255, 255, 255, .96); backdrop-filter: blur(12px); border: 2px solid var(--line);
+  box-shadow: 0 5px 0 var(--line), 0 18px 40px rgba(60, 25, 0, .18); transform: translateY(140%); transition: transform .35s cubic-bezier(.34, 1.4, .64, 1); }
+.dockbar img { width: 42px; height: 42px; border-radius: 11px; }
+.dockbar div { display: flex; flex-direction: column; line-height: 1.2; margin-right: auto; }
+.dockbar span { font-size: 13px; color: var(--muted); font-weight: 700; }
+.dockbar.show { transform: none; }
+
+@media (max-width: 900px) {
+  .pills { display: flex; }
+  .panel { grid-template-columns: 1fr; gap: 28px; justify-items: center; text-align: left; }
+  .panel .phone { width: 210px; order: 2; }
+  .panel-copy { max-width: 520px; order: 1; }
+  .panel-copy h3 { font-size: 23px; }
+  .panel-copy p { font-size: 16px; }
+  /* swipeable rows */
+  .carousel { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px; margin-inline: -16px; padding: 4px 16px 10px;
+    scroll-padding-inline: 16px; scrollbar-width: none; }
+  .carousel::-webkit-scrollbar { display: none; }
+  .carousel > * { flex: 0 0 78%; scroll-snap-align: start; }
+  .why.carousel > * { flex-basis: 72%; }
+  .scard { min-height: 0; padding-bottom: 0; }
+  .scard .phone.sm { max-width: 175px; margin-top: 14px; }
+  .scard h3 { font-size: 20px; }
+  .dockbar { display: flex; }
+  .foot { padding-bottom: 110px; }
+}
+@media (max-width: 520px) {
+  h1 { font-size: 40px; letter-spacing: -1px; }
+  .lead { font-size: 17px; margin: 16px 0 22px; }
+  .hero { padding: 20px 0 48px; }
+  .hero-art { margin-top: 8px; }
+  .hero .phone { width: 230px; }
+  .cta-row .btn-ghost { height: 56px; }
+  section { padding: 52px 0; }
+  .final { padding: 40px 20px; border-radius: 28px; }
+}
+@media (prefers-reduced-motion: reduce) { .panel { animation: none; } .dockbar { transition: none; } }
