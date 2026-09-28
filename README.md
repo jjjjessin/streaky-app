@@ -1,3 +1,3 @@
-# Streaky
+# Streakie
 
-Support and privacy pages for the Streaky iOS app. Served at https://jjjjessin.github.io/streaky-app/
+Support and privacy pages for the Streakie iOS app. Served at https://jjjjessin.github.io/streaky-app/
