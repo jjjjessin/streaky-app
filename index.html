@@ -12,7 +12,7 @@
 <link rel="icon" href="assets/streaky-icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" />
-<link rel="stylesheet" href="landing.css?v=4" />
+<link rel="stylesheet" href="landing.css?v=5" />
 </head>
 <body>
 
@@ -36,9 +36,9 @@
   <!-- Hero -->
   <section class="hero wrap">
     <div class="hero-copy">
-      <span class="pill">🔥 One tap a day</span>
+      <span class="pill">✨ New: challenge a friend</span>
       <h1>Keep every habit <span class="accent">alive</span>, one flame at a time.</h1>
-      <p class="lead">Streakie gives every habit a little flame. Check in once a day, keep your streaks going, and watch your days turn into a journey along a river.</p>
+      <p class="lead">Streakie gives every habit a little flame. Check in once a day, keep your streaks going, and watch your days turn into a journey along a river. Now with friends: challenge someone to keep a goal longest, or do it together.</p>
       <div class="cta-row">
         <a class="store" href="https://apps.apple.com/app/id6815227488" aria-label="Download on the App Store">
           <span class="apple" aria-hidden="true"></span>
@@ -54,7 +54,7 @@
       <div class="phone tilt-r"><img src="assets/shots/quest.jpg" alt="The Quest map: every day is a stepping stone on a river" /></div>
       <div class="float f1"><span class="fl">🔥</span><b>24</b> day streak</div>
       <div class="float f2"><span class="dot ok">✓</span>Walk 20 minutes</div>
-      <div class="float f3">🎁 Chest in 6 days</div>
+      <div class="float f3">⚔️ You 13 · Sara 12</div>
     </div>
   </section>
 
@@ -94,13 +94,29 @@
     <p class="eyebrow">Features</p>
     <h2>Your streak, as a journey.</h2>
     <div class="tabs" role="tablist">
-      <button role="tab" aria-selected="true" data-tab="quest">🗺️ Quest</button>
-      <button role="tab" aria-selected="false" data-tab="rest">🌙 Rest days</button>
+      <button role="tab" aria-selected="true" data-tab="friends">👯 Friends</button>
+      <button role="tab" aria-selected="false" data-tab="quest">🗺️ Quest</button>
+      <button role="tab" aria-selected="false" data-tab="rest">❄️ Freezes</button>
+      <button role="tab" aria-selected="false" data-tab="share">📤 Share</button>
       <button role="tab" aria-selected="false" data-tab="calendar">📅 Calendar</button>
       <button role="tab" aria-selected="false" data-tab="private">🔒 Private</button>
     </div>
     <div class="panels">
-      <div class="panel" data-panel="quest" role="tabpanel">
+      <div class="panel" data-panel="friends" role="tabpanel">
+        <div class="phone tilt-r"><img src="assets/shots/friends.jpg" alt="A friend's flame on your Quest river" loading="lazy" /></div>
+        <div class="panel-copy">
+          <h3>Challenge a friend. Or do it together.</h3>
+          <p>Pick any goal, with any setting, and send a link. You both start at 0 on the day your friend joins, and their flame stands on your river so you always see who's ahead.</p>
+          <ul class="ticks">
+            <li><b>Challenge:</b> the longest streak wins, 7 or 30 days or no end</li>
+            <li><b>Together:</b> every check-in adds a plank to your weekly bridge</li>
+            <li>Send cheers: Keep it lit, Nice one, Proud of you</li>
+            <li>When it ends, keep going together or carry on alone. Your streak is never reset</li>
+          </ul>
+          <p class="muted">Syncs through iCloud. Still no Streakie account.</p>
+        </div>
+      </div>
+      <div class="panel" data-panel="quest" role="tabpanel" hidden>
         <div class="phone tilt-l"><img src="assets/shots/quest.jpg" alt="The Quest map" loading="lazy" /></div>
         <div class="panel-copy">
           <h3>Every day is a stepping stone</h3>
@@ -108,20 +124,32 @@
           <ul class="ticks">
             <li>Open a chest at 7 days</li>
             <li>Trophies at 30, 50, 75 and 100</li>
+            <li>Perfect days glow gold</li>
             <li>Zoom out to see how far you've come</li>
           </ul>
           <p class="muted">Prefer a simple list? Turn Quest off in Settings.</p>
         </div>
       </div>
       <div class="panel" data-panel="rest" role="tabpanel" hidden>
-        <div class="phone tilt-r"><img src="assets/shots/rest.jpg" alt="Freeze, sick and pause days on the map" loading="lazy" /></div>
+        <div class="phone tilt-r"><img src="assets/shots/freeze.jpg" alt="Freezing a goal for today" loading="lazy" /></div>
         <div class="panel-copy">
           <h3>Life happens. Streaks survive.</h3>
-          <p>Vacation, a sick day or just a break? Pause a goal and your streak waits for you.</p>
+          <p>Freeze a goal for today and it still counts as a streak day. Vacation, a sick day or a break? Pause it and your streak waits for you.</p>
           <ul class="ticks">
-            <li>Mark a sick day and rest up</li>
-            <li>Earn freezes that save a missed day</li>
-            <li>Pauses end by themselves</li>
+            <li>Earn a freeze at every level, freeze today or let it save a missed day</li>
+            <li>Changed your mind? Undo it</li>
+            <li>Mark a sick day and rest up; pauses end by themselves</li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel" data-panel="share" role="tabpanel" hidden>
+        <div class="phone tilt-l"><img src="assets/shots/share.jpg" alt="Share Studio with Story-sized cards" loading="lazy" /></div>
+        <div class="panel-copy">
+          <h3>Share your streak</h3>
+          <p>Story-sized cards for your journey or a goal: your streak, your days since you started, or how close the next trophy is.</p>
+          <ul class="ticks">
+            <li>Swipe between four card styles</li>
+            <li>Add your own caption</li>
           </ul>
         </div>
       </div>
@@ -140,7 +168,7 @@
         <div class="phone tilt-r"><img src="assets/shots/night.jpg" alt="The Quest map at night" loading="lazy" /></div>
         <div class="panel-copy">
           <h3>Your habits stay on your phone</h3>
-          <p>No account, no ads, no tracking. Everything you enter is stored on your iPhone. Only anonymous usage statistics are sent, and you can switch them off.</p>
+          <p>No account, no ads, no tracking. Everything you enter is stored on your iPhone. Goals you share with friends sync through your own iCloud, and friends only see that goal, your first name and your check-ins. Only anonymous usage statistics are sent, and you can switch them off.</p>
           <a class="link" href="privacy.html">Read the privacy policy →</a>
         </div>
       </div>
@@ -195,6 +223,9 @@
     <details><summary>How do I check in from the Home Screen?</summary><p>Long-press your Home Screen, tap <b>Edit → Add Widget</b>, search for <b>Streakie</b> and add the small or medium widget. Tap a circle in the widget to check in.</p></details>
     <details><summary>How do reminders work?</summary><p>Streakie sends one evening check-in that lists everything still open, with a <b>Mark all done</b> button in the notification. Goals you only know the next day, like bedtime, get a morning check-in instead. Change the times in <b>Settings → Notifications</b>.</p></details>
     <details><summary>I forgot to check in yesterday.</summary><p>Open Streakie and use the <b>Log yesterday?</b> card at the top. For older days, open the goal, tap the day in its calendar and spend an edit.</p></details>
+    <details><summary>How do challenges work?</summary><p>Open a goal and tap the friends button, or tap <b>Start a challenge</b> on My goals. Choose <b>Challenge</b> (longest streak wins) or <b>Together</b> (count it as a team), then send the link. Day 1 is the day your friend joins, and you both start at 0. Your friend gets the same goal with the same setting.</p></details>
+    <details><summary>Does my friend need an account?</summary><p>No Streakie account, but both of you need Streakie on an iPhone signed in to iCloud. Shared goals sync through iCloud, and friends only see that goal, your first name and your check-ins.</p></details>
+    <details><summary>What happens when a challenge ends?</summary><p>You see who won, then choose: keep going together with no end date, place the medal on your journey, or start a rematch. Whatever you pick, your goal and its streak carry on.</p></details>
     <details><summary>What is Quest?</summary><p>A second view that shows your streak as a path of days along a river. Milestones give you edits and streak freezes. You can turn it off in <b>Settings → Quest</b>.</p></details>
     <details><summary>How does pausing work?</summary><p>Long-press a goal, or open it and tap <b>Pause this goal</b>. Choose vacation, sick or a break and how long it lasts; the pause ends by itself. Paused days never break a streak.</p></details>
     <details><summary>Will I lose my streaks if I delete the app?</summary><p>Yes. Your data lives only on your device, so deleting the app deletes your habits too.</p></details>
